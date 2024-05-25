@@ -4,6 +4,7 @@ import Navbar from '../../components/navbar/Navbar';
 import styles from './detail.module.css'
 import { GrEdit } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
+
 import axios from 'axios';
 const PropertyDetails = () => {
     const[details, setDetails] = useState({});

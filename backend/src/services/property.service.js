@@ -79,9 +79,24 @@ const removeProperty = async (id) => {
   const res = await Property.findByIdAndDelete({ _id: id });
   return res;
 };
+
+const updateLikeCount = async (id) => {
+  const property = await Property.findOne({ _id: id });
+  if (property === null) {
+    return null;
+  }
+  let count = property.like + 1;
+  const data = await Property.findByIdAndUpdate(
+    { _id: id },
+    { $set: { like: count } },
+    { new: true, useFindAndModify: false }
+  );
+  return data;
+};
 module.exports = {
   getAllProperties,
   uploadProperty,
   editProperty,
   removeProperty,
+  updateLikeCount,
 };

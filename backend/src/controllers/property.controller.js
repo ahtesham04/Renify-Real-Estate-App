@@ -1,10 +1,12 @@
+const httpStatus = require("http-status");
 const {
   getAllProperties,
   uploadProperty,
   editProperty,
   removeProperty,
+  updateLikeCount,
 } = require("../services/property.service");
-
+const ApiError = require("../utils/ApiError");
 const getProperties = async (req, res) => {
   const properties = await getAllProperties();
   res.status(200).json(properties);
@@ -96,9 +98,18 @@ const deleteProperty = async (req, res) => {
     res.status(500).json({ message: "Failed to delete property" });
   }
 };
+const increaseCount = async (req, res) => {
+  const { id } = req.params;
+  const data = await updateLikeCount(id);
+  if (data === null) {
+    throw new ApiError(httpStatus.NOT_FOUND, "Property not found");
+  }
+  res.status(httpStatus.OK).json(data);
+};
 module.exports = {
   getProperties,
   addNewProperty,
   updateProperty,
   deleteProperty,
+  increaseCount,
 };

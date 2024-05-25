@@ -11,14 +11,43 @@ const Property = () => {
     const[bedrooms, setBedrooms] = useState('')
     const[maxPrice, setMaxPrice] = useState('');
     const[filterData, setFilterData] = useState(properties)
+    const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const dataPerPage = 3;
+  
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+  // console.log(TranscList);
+  // useEffect(() => {
+  //   getAllPropertyData()
+  //   setTotalPages(filterData.length / 3);
+  //   const indexOfLastData = currentPage * dataPerPage;
+  // const indexOfFirstData = indexOfLastData - dataPerPage;
+  // const currentData = filterData && filterData.slice(indexOfFirstData, indexOfLastData);
+  //  setFilterData(currentData)
+  // }, [currentPage]);
     const getAllPropertyData = async() =>{
+      try {
         const res = await axios.get("http://localhost:8082/api/property")
         setProperties(res.data)
         setFilterData(res.data)
         console.log(res)
+      } catch (error) {
+        console.log(error)
+      }
+       
     }
     useEffect(() =>{
-getAllPropertyData()
+      getAllPropertyData()
     },[])
 const filterByCity = (properties,cityName) =>{
   let property = JSON.parse(JSON.stringify(properties))
@@ -37,7 +66,6 @@ const filterByPrice = (properties,price) =>{
 }
 
     const searchHandler = () =>{
-      debugger
         if(city && bedrooms && maxPrice){
             let cityProp = filterByCity(properties,city);
             let bedroomProp = filterByBedrooms(cityProp,bedrooms);

@@ -26,9 +26,14 @@
     padding: 6px;
 }
 
-.card h5{
+.title h5{
     color: #102851;
     padding-left: 6px;
+}
+.title{
+    display: flex;
+    /* gap: 5px; */
+    justify-content: space-between;
 }
 
 .cardText p,.cardText h6{

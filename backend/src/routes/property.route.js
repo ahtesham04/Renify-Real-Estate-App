@@ -4,6 +4,7 @@ const {
   addNewProperty,
   updateProperty,
   deleteProperty,
+  increaseCount,
 } = require("../controllers/property.controller");
 const auth = require("../middlewares/auth");
 
@@ -13,6 +14,7 @@ router.get("/", getProperties);
 router.post("/new", auth, addNewProperty);
 router.put("/:id", auth, updateProperty);
 router.delete("/:id", auth, deleteProperty);
+router.put("/:id/likes", increaseCount);
 
 // Delete a property
 // router.delete("/:id", auth, async (req, res) => {
