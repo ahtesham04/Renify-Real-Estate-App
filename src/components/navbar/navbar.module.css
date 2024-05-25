@@ -1,0 +1,39 @@
+.nav{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #102851;
+}
+
+.navRight{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 75%;
+    gap: 40px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #102851;  
+}
+.navBtn{
+    width: 130px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #2AA8FF;
+    background-color: #2AA8FF;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.navRight a{
+    text-decoration: none !important; 
+    color: #102851 !important;
+}

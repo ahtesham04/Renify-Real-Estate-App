@@ -1,0 +1,1 @@
+"mongodb://ac-d0sas9w-shard-00-00.2kwcseg.mongodb.net:27017,ac-d0sas9w-shard-00-01.2kwcseg.mongodb.net:27017,ac-d0sas9w-shard-00-02.2kwcseg.mongodb.net:27017/?replicaSet=atlas-3e542r-shard-0" --ssl --authenticationDatabase admin --username ansari --password adiba17

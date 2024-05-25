@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    padding: 10px 80px;
+    gap: 30px;
+}
+
+.col1{
+    width: 50%;
+}
+
+.col1 img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.col2{
+    width: 50%;
+    border:1px solid #dddee6;
+    border-radius: 7px;
+    padding: 10px;
+    color: #102851;
+}
+
+h2,h3{
+margin-bottom: 12px;
+}
+
+.textContent{
+    display: flex;
+}
+
+.leftText{
+    width: 50%;
+}
+
+.rightText{
+    width: 50%;
+}
+
+.leftText p, .rightText p{
+    border-bottom: 1px solid #dddee6;
+    margin-bottom: 16px;
+}
+
+.intBtn{
+    background-color: #102851;
+    color: #fff;
+    width: 130px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #2AA8FF;
+   
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.title{
+    display:flex;
+    gap: 20px;
+}

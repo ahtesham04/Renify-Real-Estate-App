@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import PostProperty from "./components/post property/PostProperty";
+import Registration from "./components/registration/Registration";
+import { Route, Routes } from "react-router-dom";
+import Login from "./components/login/Login";
+import Home from "./pages/HomePage/Home";
+import PropertyDetails from "./pages/PropertyDetailsPage/PropertyDetails";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <PostProperty /> */}
+      {/* <Registration /> */}
+      <Navbar />
+      <Routes>
+        <Route path="/register" element={<Registration />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/postProperty" element={<PostProperty />} />
+        <Route path="/propertyDetails" element={<PropertyDetails />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 

@@ -1,0 +1,38 @@
+.card{
+    height: 280px;
+    width: 263px;
+    /* border: 1px solid black; */
+    /* background-color: #fff; */
+}
+
+.card img{
+    width: 100%;
+    height:50%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s all;
+    border-radius: 4px;
+}
+
+.card img:hover{
+    filter: brightness(50%);
+    /* transform: scale(1.5); */
+}
+.cardText{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.card h5{
+    color: #102851;
+    padding-left: 6px;
+}
+
+.cardText p,.cardText h6{
+    font-size: 14px;
+    font-weight:600;
+    color: #102851;
+}
