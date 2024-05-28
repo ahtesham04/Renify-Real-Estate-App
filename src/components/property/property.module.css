@@ -36,8 +36,8 @@
 .inputField{
     width: 200px;
     height: 50px;
-    border-radius: 8px;
-    border: 1px sold #f0f0f0;
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
 }
 
 .sIcon{
