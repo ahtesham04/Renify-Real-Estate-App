@@ -24,7 +24,7 @@ const Navbar = () => {
       }
       
      
-    },[userToken,userName])
+    },[])
   return (
     <div className={styles.nav}>
         <div className={styles.logo}>Renify</div>
