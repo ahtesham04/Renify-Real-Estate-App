@@ -37,7 +37,7 @@ const Property = () => {
   // }, [currentPage]);
     const getAllPropertyData = async() =>{
       try {
-        const res = await axios.get("http://localhost:8082/api/property")
+        const res = await axios.get("https://renify-real-estate-app.onrender.com/api/property")
         setProperties(res.data)
         setFilterData(res.data)
         console.log(res)

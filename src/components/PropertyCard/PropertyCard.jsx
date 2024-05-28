@@ -12,7 +12,7 @@ const PropertyCard = ({data}) => {
     }
     const handleLikes = async() =>{
         try {
-            const res = await axios.put(`http://localhost:8082/api/property/${data._id}/likes`)
+            const res = await axios.put(`https://renify-real-estate-app.onrender.com/api/property/${data._id}/likes`)
             console.log(res)
             // let filterData = res.data.find(elem => elem._id === data._id);
             setLikeCount(res.data.like)

@@ -23,7 +23,7 @@ const PropertyDetails = () => {
         navigate("/login")
         alert('Please login for owner details')
       }
-        const res =await axios.get(`http://localhost:8082/api/user/${details.owner}`
+        const res =await axios.get(`https://renify-real-estate-app.onrender.com/api/user/${details.owner}`
         ,{
           headers:{
             'Authorization':`${userToken}`
@@ -35,7 +35,7 @@ const PropertyDetails = () => {
     }
     const deleteProperty = async() =>{
         try {
-            await axios.delete(`http://localhost:8082/api/property/${details._id}`
+            await axios.delete(`https://renify-real-estate-app.onrender.com/api/property/${details._id}`
             ,{
               headers:{
                 'Authorization':`${userToken}`

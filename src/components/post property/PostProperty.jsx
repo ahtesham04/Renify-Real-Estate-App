@@ -55,7 +55,7 @@ const PostProperty = () => {
         }
     if(isEdit){
       try {
-        await axios.put(`http://localhost:8082/api/property/${editId}`, property
+        await axios.put(`https://renify-real-estate-app.onrender.com/api/property/${editId}`, property
         ,{
           headers:{
             'Authorization':`${access_token}`
@@ -83,7 +83,7 @@ const PostProperty = () => {
       
     }else{
         try {
-          await axios.post(`http://localhost:8082/api/property/new`, property
+          await axios.post(`https://renify-real-estate-app.onrender.com/api/property/new`, property
           ,{
             headers:{
               'Authorization':`${access_token}`

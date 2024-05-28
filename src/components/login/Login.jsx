@@ -20,7 +20,7 @@ const Login = () => {
         alert('Please enter email and password')
       }
         try {
-         const res = await axios.post(`http://localhost:8082/api/auth/login`, formData);
+         const res = await axios.post(`https://renify-real-estate-app.onrender.com/api/auth/login`, formData);
          console.log(res,'user')
           alert('Logged in successfully');
           localStorage.setItem('token', JSON.stringify(res.data.tokens));

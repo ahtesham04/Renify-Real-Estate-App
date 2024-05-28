@@ -46,7 +46,7 @@ const validateInput = (data) =>{
         const flag = validateInput(formData)
     if(flag){
         try {
-          await axios.post(`http://localhost:8082/api/auth/register`, formData);
+          await axios.post(`https://renify-real-estate-app.onrender.com/api/auth/register`, formData);
           alert('User added successfully');
           navigate('/login');
         } catch (error) {
