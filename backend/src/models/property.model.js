@@ -1,4 +1,4 @@
-const { type } = require("@testing-library/user-event/dist/type");
+
 const mongoose = require("mongoose");
 const propertySchema = new mongoose.Schema({
   owner: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
